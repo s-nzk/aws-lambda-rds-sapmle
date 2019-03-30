@@ -31,7 +31,6 @@ public class AppTest {
     @org.junit.Test
     public void testApp() {
         App app = new App();
-        System.out.println(1111);
         Response reponse = app.handleRequest(new Request(), null);
         Assert.assertEquals(reponse.status, "ok");
 

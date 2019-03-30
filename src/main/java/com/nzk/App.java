@@ -57,29 +57,9 @@ public class App implements RequestHandler<Request, Response> {
         }
         return new Response("ok");
     }
-}
-class Request {
-    String param;
 
-    /**
-     * @return the param
-     */
-    public String getParam() {
-        return param;
-    }
 
-    /**
-     * @param param the param to set
-     */
-    public void setParam(String param) {
-        this.param = param;
-    }
+
+
 }
 
-class Response {
-    String status;
-
-    Response(String status) {
-        this.status = status;
-    }
-}
