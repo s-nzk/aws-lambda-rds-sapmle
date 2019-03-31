@@ -55,7 +55,12 @@ public class App implements RequestHandler<Request, Response> {
                 e.printStackTrace();
             }
         }
-        return new Response("ok");
+        //この形式じゃないとapi-getewayが落ちる(古い実装方法だから？)
+        //https://qiita.com/maaz118/items/e20b64f088fbead07206
+        Response response = new Response();
+        response.body = "OK";
+        response.statusCode = 200;
+        return response;
     }
 
 
