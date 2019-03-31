@@ -8,28 +8,28 @@ public class Response {
     public Map<String, String> headers = new HashMap<>();
     public String body;
 
-    public int getStatusCode() {
-        return statusCode;
+    public String getBody() {
+        return body;
     }
 
     public Map<String, String> getHeaders() {
         return headers;
     }
 
-    public String getBody() {
-        return body;
+    public int getStatusCode() {
+        return statusCode;
     }
 
-
-    public void setBody(String body) {
-        this.body = body;
+    public void setStatusCode(int statusCode) {
+        this.statusCode = statusCode;
     }
+
 
     public void setHeaders(Map<String, String> headers) {
         this.headers = headers;
     }
 
-    public void setStatusCode(int statusCode) {
-        this.statusCode = statusCode;
+    public void setBody(String body) {
+        this.body = body;
     }
 }

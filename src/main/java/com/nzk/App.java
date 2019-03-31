@@ -13,8 +13,7 @@ import com.amazonaws.services.lambda.runtime.RequestHandler;
 /**
  * lambda -> rds sample
  */
-public class App implements RequestHandler<Request, Response> {
-    @Override
+public class App {
     public Response handleRequest(Request input, Context context) {
         Connection conn = null;
         Statement stmt = null;
@@ -55,10 +54,9 @@ public class App implements RequestHandler<Request, Response> {
                 e.printStackTrace();
             }
         }
-        //この形式じゃないとapi-getewayが落ちる(古い実装方法だから？)
-        //https://qiita.com/maaz118/items/e20b64f088fbead07206
+        ///この形式じゃないとapi-getewayが落ちる
         Response response = new Response();
-        response.body = "OK";
+        response.body = "OOOKKK";
         response.statusCode = 200;
         return response;
     }

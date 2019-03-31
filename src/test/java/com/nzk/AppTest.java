@@ -32,7 +32,7 @@ public class AppTest {
     public void testApp() {
         App app = new App();
         Response reponse = app.handleRequest(new Request(), null);
-        Assert.assertEquals(reponse.body, "OK");
+        Assert.assertEquals(reponse.body, "OOOKKK");
 
     }
 }
